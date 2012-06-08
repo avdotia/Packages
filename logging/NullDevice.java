@@ -7,18 +7,16 @@ class NullDevice implements Logger {
    {
       
    }
-   public boolean connect()
+   public boolean connect() throws CannotConnectException
    {
-      return true;
+
    }
-   public boolean disconnect()
+   public boolean disconnect() throws NotConnectedException
    {
-      return true;
    }
-   public boolean log(String msg)
+   public boolean log(String msg) throws NotConnectedException
    {
       System.out.println(msg);
-      return true;
    }
    
 } 
