@@ -6,21 +6,21 @@ class File implements Logger
    {
       this.dstName = dstName;
    }
-   public boolean connect() throws CannotConnectException
+   public void connect() throws CannotConnectException
    {
       if (dstName == null)
-         throw new CannotConnectException;
+         throw new CannotConnectException();
 
    }
-   public boolean disconnect() throws NotConnectedException
+   public void disconnect() throws NotConnectedException
    {
       if (dstName == null)
-         throw new NotConnectedException;
+         throw new NotConnectedException();
    }
-   public boolean log(String msg) throws NotConnectedException
+   public void log(String msg) throws NotConnectedException
    {
       if (dstName == null)
-         throw new NotConnectedException;
+         throw new NotConnectedException();
       System.out.println("writing " + msg + " to file " + dstName);
    }
 }

@@ -6,7 +6,7 @@ was not called or when it threw CannotConnectException*/
 package logging;
 public interface Logger
 {
-   boolean connect() throws CannotConnectException;
-   boolean disconnect() throws NotConnectedException;
-   boolean log(String msg) throws NotConnectedException;
+   void connect() throws CannotConnectException;
+   void disconnect() throws NotConnectedException;
+   void log(String msg) throws NotConnectedException;
 }

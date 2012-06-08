@@ -9,10 +9,10 @@ public abstract class LoggerFactory
    {
       switch (dstType)
       {
-         case CONSOLE: return new Console(dstName.length == 0 ? null : dstName[0]);
-         case FILE: return new File(dstName.length == 0 ? null : dstName[0]);
-         case NULLDEVICE: return new NullDevice(null);
-         default: return null;
+         case CONSOLE : return new Console(dstName.length == 0 ? null : dstName[0]);
+         case FILE : return new File(dstName.length == 0 ? null : dstName[0]);
+         case NULLDEVICE : return new NullDevice(null);
+         default : return null;
       }
    }
 }

@@ -6,13 +6,15 @@ class Console implements Logger
    {
       this.dstName = dstName;
    }
-   public boolean connect() throws CannotConnectException
+   public void connect() throws CannotConnectException
+   {
+      System.out.println("Exploto lol");
+      System.out.println("Las ganas!! arreglado");
+   }
+   public void disconnect() throws NotConnectedException
    {
    }
-   public boolean disconnect() throws NotConnectedException
-   {
-   }
-   public boolean log(String msg) throws NotConnectedException
+   public void log(String msg) throws NotConnectedException
    {
       System.out.println(msg);
    }
